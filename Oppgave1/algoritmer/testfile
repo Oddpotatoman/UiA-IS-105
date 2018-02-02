@@ -1,0 +1,13 @@
+goos: darwin
+goarch: amd64
+BenchmarkBSortModified100-8     	  100000	     12698 ns/op
+BenchmarkBSortModified1000-8    	    2000	    621448 ns/op
+BenchmarkBSortModified10000-8   	      10	 105175007 ns/op
+BenchmarkBSort100-8             	  100000	     16138 ns/op
+BenchmarkBSort1000-8            	    2000	    960223 ns/op
+BenchmarkBSort10000-8           	      10	 153895411 ns/op
+BenchmarkQSort100-8             	  300000	      4145 ns/op
+BenchmarkQSort1000-8            	   30000	     52912 ns/op
+BenchmarkQSort10000-8           	    2000	    674748 ns/op
+PASS
+ok  	_/Users/oddandre/Desktop/Oblig1/src/algorithms	25.452s
