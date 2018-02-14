@@ -6,7 +6,7 @@ import (
 )
 
 //lager en main funksjon som kjører når jeg skriver "go run ascii.go" i cmd/powershell/bash osv
-//i main kaller den på 2 funksjoner, den første er oppgave a og den andre er oppgave b
+//i main kaller den på 1 funksjon, den første er oppgave a og den andre er oppgave b
 
 func main() {
 	iterateOverExtendedASCIIStringLiteral()
