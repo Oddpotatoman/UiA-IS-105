@@ -17,25 +17,25 @@ func Adder(done chan bool) {
 
 	inputS := string(b)
 
-	tallS := strings.Fields(inputS)
+	talletS := strings.Fields(inputS)
 
-	tall1S := string(tallS[0])
-	tall2S := string(tallS[1])
+	tallet1S := string(talletS[0])
+	tallet2S := string(talletS[1])
 
-	tall1, err := strconv.Atoi(tall1S)
+	tallet1, err := strconv.Atoi(tallet1S)
 	//
 	//Feilmeldingen "Invalid syntax" kommer her fordi tall1S ikke er et tall
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	tall2, err := strconv.Atoi(tall2S)
+	tallet2, err := strconv.Atoi(tallet2S)
 	//Feilmeldingen "Invalid syntax" kommer opp her fordi tall2S ikke er et tall
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	sum := tall1 + tall2
+	sum := tallet1 + tallet2
 
 	sumS := strconv.Itoa(sum)
 
