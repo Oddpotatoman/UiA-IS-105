@@ -24,13 +24,13 @@ func Adder(done chan bool) {
 
 	tallet1, err := strconv.Atoi(tallet1S)
 	//
-	//Feilmeldingen "Invalid syntax" kommer her fordi tall1S ikke er et tall
+	//Feilmeldingen "Invalid syntax" kommer her fordi tallet1S ikke er et tall
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	tallet2, err := strconv.Atoi(tallet2S)
-	//Feilmeldingen "Invalid syntax" kommer opp her fordi tall2S ikke er et tall
+	//Feilmeldingen "Invalid syntax" kommer opp her fordi tallet2S ikke er et tall
 	if err != nil {
 		log.Fatal(err)
 	}
