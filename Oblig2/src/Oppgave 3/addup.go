@@ -1,42 +1,53 @@
 package main
 
 import (
+	"os"
+	"strconv"
 	"fmt"
-	"time"
+	"log"
+	"os/signal"
 )
 
 func main() {
+	d := make(chan os.Signal, 2)
+	signal.Notify(d, os.Interrupt,)
+	go func() {
+		<-d
+		fmt.Println("End of process")
+		os.Exit(1)
+	}()
+
+	functionA()
+}
+
+func functionA() {
+	input1 := os.Args[1]
+	input2 := os.Args[2]
+
+	tall1, err := strconv.Atoi(input1)
+	//Feilmeldingen "Invalid syntax" kommer opp når det færste du legger til ikke er et tall.
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	tall2, err := strconv.Atoi(input2)
+	//Her kommer en feilmelding dersom det andre argumentet ikke er et tall.
+	//Feilmeldingen sier "Invalid syntax"
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	c := make(chan int)
-	go readInput(c)
-	time.Sleep(5 * 1e9)
-	go addUp(c)
-	time.Sleep(5 * 1e9)
+
+	go functionB(tall1, tall2, c)
+
+	resultat := <-c
+
+	fmt.Println(resultat)
 }
 
-func readInput(c chan int) {
+func functionB(tall1 int, tall2 int, c chan int) {
+	resultat := tall1 + tall2
 
-	var n1 int
-	var n2 int
-
-	fmt.Println("Enter number: ")
-	fmt.Scan(&n1)
-	fmt.Println("Enter number: ")
-	fmt.Scan(&n2)
-
-	c <- n1
-	c <- n2
-
-	res := <-c
-	fmt.Println("Result: ", res)
-
-}
-
-func addUp(c chan int) {
-
-	n1, n2 := <-c, <-c
-	res := (n1 + n2)
-
-	c <- res
-
+	c <- resultat
 }
