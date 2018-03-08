@@ -25,14 +25,13 @@ func functionA() {
 	input2 := os.Args[2]
 
 	tall1, err := strconv.Atoi(input1)
-	//Feilmeldingen "Invalid syntax" kommer opp når det færste du legger til ikke er et tall.
+	//Feilmeldingen "Invalid syntax" vises når den første påstanden ikke er et tall
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	tall2, err := strconv.Atoi(input2)
-	//Her kommer en feilmelding dersom det andre argumentet ikke er et tall.
-	//Feilmeldingen sier "Invalid syntax"
+	//Feilmeldingen "Invalid syntax" vises når den andre påstanden ikke er et tall
 	if err != nil {
 		log.Fatal(err)
 	}
