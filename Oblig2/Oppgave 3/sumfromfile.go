@@ -38,16 +38,15 @@ func sumfromfile()  {
 
 	result := tallet1 + tallet2
 
-
-	f, err := os.OpenFile("result.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY,0644)
+	file, err := os.OpenFile("result.txt", os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("Failed to open file", err)
 	}
-	if _, err := fmt.Fprintf(f,"\n%d\n", result); err != nil {
-		log.Fatal(err)
+	if _, err := fmt.Fprintf(file,"\n%d\n", result); err != nil {
+		log.Fatal("Failed to write to file", err)
 	}
 
-	if err := f.Close(); err != nil {
+	if err := file.Close(); err != nil {
 		log.Fatal(err)
 	}
 }
