@@ -31,14 +31,14 @@ func addtofile() {
 	var n1 int
 	var n2 int
 
-	fmt.Println("Enter number: ")
+	fmt.Println("Skriv inn nummer: ")
 	fmt.Scan(&n1)
-	fmt.Println("Enter number: ")
+	fmt.Println("Skriv inn nummer: ")
 	fmt.Scan(&n2)
 
 	file, err := os.Create("3b.txt")
 	if err != nil {
-		log.Fatal("Cannot create file", err)
+		log.Fatal("Kan ikke opprette fil", err)
 	}
 	defer file.Close()
 
