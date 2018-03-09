@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9308b1df-363f-4913-92a2-5688d9a212a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" />
-      <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" />
+      <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="addtofile.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="1224">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -28,8 +27,8 @@
       <file leaf-file-name="sumfromfile.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="510">
+              <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
               <folding>
                 <element signature="e#14#64#0" expanded="true" />
               </folding>
@@ -37,22 +36,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feilhåndtering.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="feilhåndtering.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="1207">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addup.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addup.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-587">
-              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="867">
+              <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+              <folding>
+                <element signature="e#14#70#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,10 +67,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" />
         <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go" />
         <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" />
         <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" />
+        <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" />
       </list>
     </option>
   </component>
@@ -79,10 +80,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="619" />
     <option name="y" value="42" />
-    <option name="width" value="697" />
+    <option name="width" value="706" />
     <option name="height" value="726" />
   </component>
   <component name="ProjectView">
@@ -178,7 +179,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="619" y="42" width="706" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -331,37 +332,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go">
+    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="1207">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="510">
+          <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
           <folding>
             <element signature="e#14#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go">
+    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="867">
+          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

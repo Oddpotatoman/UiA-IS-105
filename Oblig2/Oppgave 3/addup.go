@@ -42,9 +42,9 @@ func addUp(c chan int) {
 	tallet1, tallet2 := <-c, <-c // mottar data fra readInput()
 	sum := tallet1 + tallet2
 	c <- sum // sender resultat tilbake til readInput()
+
 	signal_chan := make(chan os.Signal, 1)
-	signal.Notify(signal_chan,
-		syscall.SIGINT,)
+	signal.Notify(signal_chan, syscall.SIGINT,)
 
 	exit_chan := make(chan int)
 
