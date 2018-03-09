@@ -31,13 +31,11 @@ func readInput(c chan int) {
 	c <- tallet1 //sender data via channel
 	c <- tallet2
 
-	sum := <-c // mottar sum / resultat ifra channel
+	sum := <-c // mottar resultat ifra channel
 
 	fmt.Println("Resultat: ", sum)
 
-
 }
-
 
 func addUp(c chan int) {
 
@@ -63,6 +61,5 @@ func addUp(c chan int) {
 
 	code := <-exit_chan
 	os.Exit(code)
-
 
 }
