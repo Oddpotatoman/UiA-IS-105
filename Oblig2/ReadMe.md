@@ -1,12 +1,12 @@
 Oppgave 1:
 
 I oppgave 1 har vi laget et program som skal returnere definert informasjon om en fil "fileinfo.go". I tillegg har vi
-bygget en build- program som kan utfæres via kommandolinja.
+bygget en build- program som kan utføres via kommandolinja.
 
 Oppgave 2:
 
 I oppgave 2 har vi laget en go fil som har filnavnet "filecount.go". Denne filen skal lese en tekst fil og i tillegg
-skriver ut maks antall linjer samt de fem runene som forekommer mest i fila i medfølgende fil text.txt. Vi har også bygget
+skrive ut maks antall linjer samt de fem runene som forekommer mest i fila i medfølgende fil text.txt. Vi har også bygget
 filen om til et kjørbart program sånn at den han bli utført i en terminal. Det blir vist en resultat i formatform med info om
 filen, antal linjer i filen, og hvilken runer som er fremkalt mest.
 
@@ -21,7 +21,7 @@ sammen de to tallene og sende resultatet tilbake til funksjon A og skrive ut res
 
 b.
 I oppgave b har vi laget 2 programmer med navnene "addtofile.go" og "sumfromfile.go". Opggaven her er å få dem til å kommunisere med hverandre
-gjennom en fil. "Addtofile" leser to tall og skriver disse til en fil. "Sumfrom file" derimot leser tall fra en fil som er laget av program A
+gjennom en fil. "Addtofile" leser to tall og skriver disse til en fil. "Sumfromfile" derimot leser tall fra en fil som er laget av program A
 og adderer de to tallene. Summen skrives tilmake til samme fil. Program A leser resultatet og skriver ut summen til stdout.
 
 c.
