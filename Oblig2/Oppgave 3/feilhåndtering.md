@@ -48,6 +48,7 @@ Koden over har også en feilhåndteringsfunksjon som har i oppgave å lese slutt
 		log.Fatal(err)
 	}
 
-	Over ser vi på feilhåndteringen i filen sumfromfile.go. Vi kan se at den er såpass lik som den andre, men her blir filen åpnet med os.O_APPEND i tillegg til O_WRONLY.
-	Denne filen er ikke tom og vi vil beholde informasjonen i den for å printe imput som en del av resultatet.
-	Vi har derfor brukt APPEND for å  legge til den nye informasjonen etter den eksisterende.
+
+Over ser vi på feilhåndteringen i filen sumfromfile.go. Vi kan se at den er såpass lik som den andre, men her blir filen åpnet med os.O_APPEND i tillegg til O_WRONLY.
+Denne filen er ikke tom og vi vil beholde informasjonen i den for å printe imput som en del av resultatet.
+Vi har derfor brukt APPEND for å  legge til den nye informasjonen etter den eksisterende.
