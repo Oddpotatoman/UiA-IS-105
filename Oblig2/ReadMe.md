@@ -1,3 +1,10 @@
+Obligatorisk innlevering 2:
+Madina Abdul Sattar
+Anders Hodne
+Anders Ekse
+Odd Andre Vatne
+
+
 Oppgave 1:
 
 I oppgave 1 har vi laget et program som skal returnere definert informasjon om en fil "fileinfo.go". I tillegg har vi
