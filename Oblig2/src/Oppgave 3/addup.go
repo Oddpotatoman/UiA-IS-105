@@ -1,11 +1,12 @@
 package main
 
 import (
-	"os"
-	"strconv"
+
 	"fmt"
-	"log"
+	"time"
+	"os"
 	"os/signal"
+<<<<<<< HEAD
 	
 )
 
@@ -27,34 +28,62 @@ func main() {
 	
 	
 }
+=======
+	"syscall"
+)
 
-func functionA() {
-	input1 := os.Args[1]
-	input2 := os.Args[2]
-
-	tallet1, err := strconv.Atoi(input1)
-	//Feilmeldingen "Invalid syntax" vises når den første påstanden ikke er et tall
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	tallet2, err := strconv.Atoi(input2)
-	//Feilmeldingen "Invalid syntax" vises når den andre påstanden ikke er et tall
-	if err != nil {
-		log.Fatal(err)
-	}
+func main() {
 
 	c := make(chan int)
+	go readInput(c)
+	time.Sleep(5 * 1e9)
+	go addUp(c)
+	time.Sleep(5 * 1e9)
+>>>>>>> 7090ba9e70db8d8da5bf83e047177355b2d208fc
 
-	go functionB(tallet1, tallet2, c)
-
-	resultat := <-c
-
-	fmt.Println(resultat)
 }
 
-func functionB(tallet1 int, tallet2 int, c chan int) {
-	resultat := tallet1 + tallet2
+func readInput(c chan int) {
 
-	c <- resultat
+	var tallet1 int
+	var tallet2 int
+	fmt.Println("Her kan du sette inn et tall: ")
+	fmt.Scan(&tallet1)
+	fmt.Println("Her kan du sette inn et annet tall: ")
+	fmt.Scan(&tallet2)
+
+	c <- tallet1 //sender data via channel
+	c <- tallet2
+
+	sum := <-c // mottar resultat ifra channel
+
+	fmt.Println("Resultat: ", sum)
+
+}
+
+func addUp(c chan int) {
+
+	tallet1, tallet2 := <-c, <-c // mottar data fra readInput()
+	sum := tallet1 + tallet2
+	c <- sum // sender resultat tilbake til readInput()
+	signal_chan := make(chan os.Signal, 1)
+	signal.Notify(signal_chan,
+		syscall.SIGINT,)
+
+	exit_chan := make(chan int)
+
+	go func() {
+		for {
+			s := <-signal_chan
+			switch s { // Ctrl+c
+			case syscall.SIGINT:
+				fmt.Println("Nødstopp!!")
+
+			}
+		}
+	}()
+
+	code := <-exit_chan
+	os.Exit(code)
+
 }
