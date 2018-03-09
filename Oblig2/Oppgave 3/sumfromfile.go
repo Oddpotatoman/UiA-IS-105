@@ -40,10 +40,10 @@ func sumfromfile()  {
 
 	file, err := os.OpenFile("result.txt", os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
-		log.Fatal("Failed to open file", err)
+		log.Fatal("Kan ikke åpne fil", err)
 	}
 	if _, err := fmt.Fprintf(file,"\n%d\n", result); err != nil {
-		log.Fatal("Failed to write to file", err)
+		log.Fatal("Kan ikke skrive fil", err)
 	}
 
 	if err := file.Close(); err != nil {
