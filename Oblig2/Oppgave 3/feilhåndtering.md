@@ -55,3 +55,25 @@ utførelsen av denne funksjonen. Den vil fortsette å utføre defer funksjoner i
 Over ser vi på feilhåndteringen i filen sumfromfile.go. Vi kan se at den såpass er lik som den andre, men her blir filen åpnet med os.O_APPEND i tillegg til O_WRONLY.
 Denne filen er ikke tom og vi vil beholde informasjonen i den for å printe imput som en del av resultatet.
 Vi har derfor brukt APPEND for å  legge til den nye informasjonen etter den eksisterende.
+
+
+    func readResult(path string) {
+	// leser filen, lagrer siste tall i resultat og konverterer til integer (int)
+
+	data, err := ioutil.ReadFile(path)
+	checkErr(err)
+
+	tempData := string(data)
+	stringData := strings.Split(tempData, "\n")
+	temp := stringData[len(stringData)-2]
+
+	resultat, err := strconv.Atoi(temp)
+	checkErr(err)
+
+	fmt.Println("Resultat: ", resultat)
+    }
+
+Funksjonen readResult lager en path av typen string. Deretter blir ioutil.ReadFile(path)
+en input/output funksjon for denne pathen. Videre nedover har vi verdier som er i form av
+string. Strconv.Atoi(temp). Disse overfører verdiene fra string til integer verdier. CheckErr er for
+å sjekke om det er noe error. Til slutt printer den bare det som står i fmt.Println.

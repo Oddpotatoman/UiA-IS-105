@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9308b1df-363f-4913-92a2-5688d9a212a0" name="Default" comment="endre">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="9308b1df-363f-4913-92a2-5688d9a212a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go" />
-      <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" />
       <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" />
       <change beforePath="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" afterPath="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" />
     </list>
@@ -18,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addtofile.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addtofile.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+            <state relative-caret-position="451">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -31,8 +28,8 @@
       <file leaf-file-name="sumfromfile.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="e#14#64#0" expanded="true" />
               </folding>
@@ -40,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feilhåndtering.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="feilhåndtering.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="54" column="83" lean-forward="false" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+            <state relative-caret-position="379">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,7 +50,7 @@
       <file leaf-file-name="addup.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="-587">
               <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
               <folding />
             </state>
@@ -69,10 +66,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" />
         <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go" />
-        <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" />
         <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go" />
+        <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go" />
+        <option value="$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md" />
       </list>
     </option>
   </component>
@@ -83,10 +80,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="691" />
-    <option name="y" value="151" />
+    <option name="x" value="619" />
+    <option name="y" value="42" />
     <option name="width" value="697" />
-    <option name="height" value="729" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -336,7 +333,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addup.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="-587">
           <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
           <folding />
         </state>
@@ -344,26 +341,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/sumfromfile.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="e#14#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md">
+    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="54" column="83" lean-forward="false" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
+        <state relative-caret-position="451">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/addtofile.go">
+    <entry file="file://$PROJECT_DIR$/Oblig2/Oppgave 3/feilhåndtering.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="379">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>

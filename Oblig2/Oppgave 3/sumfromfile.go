@@ -49,4 +49,8 @@ func sumfromfile()  {
 	if err := file.Close(); err != nil {
 		log.Fatal(err)
 	}
+
+
+
+
 }
