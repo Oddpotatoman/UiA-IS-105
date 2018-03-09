@@ -6,31 +6,6 @@ import (
 	"time"
 	"os"
 	"os/signal"
-<<<<<<< HEAD
-	
-)
-
-func main() {
-	d := make(chan os.Signal, 1)
-	signal.Notify(d, os.Interrupt)
-	
-	
-	go func() {
-	
-		for signal := range d {
-			fmt.Println(signal, "SIGINT")
-			os.Exit(1)
-		}
-	}()
-	
-	functionA()
-	
-	
-	
-}
-=======
-	"syscall"
-)
 
 func main() {
 
@@ -39,7 +14,7 @@ func main() {
 	time.Sleep(5 * 1e9)
 	go addUp(c)
 	time.Sleep(5 * 1e9)
->>>>>>> 7090ba9e70db8d8da5bf83e047177355b2d208fc
+
 
 }
 
