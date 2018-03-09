@@ -43,7 +43,7 @@ func addUp(c chan int) {
 
 	tallet1, tallet2 := <-c, <-c // mottar data fra readInput()
 	sum := tallet1 + tallet2
-	c <- sum // sender sum / resultat tilbake til readInput()
+	c <- sum // sender resultat tilbake til readInput()
 	signal_chan := make(chan os.Signal, 1)
 	signal.Notify(signal_chan,
 		syscall.SIGINT,)
@@ -55,7 +55,7 @@ func addUp(c chan int) {
 			s := <-signal_chan
 			switch s { // Ctrl+c
 			case syscall.SIGINT:
-				fmt.Println("Programmet er nå avsluttet.")
+				fmt.Println("Nødstopp!!")
 
 			}
 		}
