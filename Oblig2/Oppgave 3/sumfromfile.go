@@ -7,6 +7,10 @@ import (
 	"bufio"
 	"strconv"
 )
+func main(){
+	sumfromfile()
+}
+
 
 func readLines(path string) ([]string, error) {
 	file, err := os.Open(path)
