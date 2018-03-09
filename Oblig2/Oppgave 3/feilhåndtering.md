@@ -29,9 +29,25 @@ vi åpner kan skrives i. Videre ser vi at programmet har brukt verdier som vi ha
 Hvis det kommer opp error så vil det komme opp "Kan ikke skrive fil"
 Til slutt lukkes filen og deretter blir skrevet i sumfromfile.go.
 
-func checkErr(e error) {
+    func checkErr(e error) {
 	if e != nil {
 		panic(e)
 
 Koden over har også en feilhåndteringsfunksjon som har i oppgave å lese sluttresusltatet fra "3b.txt"
 
+
+    file, err := os.OpenFile("result.txt", os.O_APPEND|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Fatal("Kan ikke åpne fil", err)
+	}
+	if _, err := fmt.Fprintf(file,"\n%d\n", result); err != nil {
+		log.Fatal("Kan ikke skrive fil", err)
+	}
+
+	if err := file.Close(); err != nil {
+		log.Fatal(err)
+	}
+
+	Over ser vi på feilhåndteringen i filen sumfromfile.go. Vi kan se at den er såpass lik som den andre, men her blir filen åpnet med os.O_APPEND i tillegg til O_WRONLY.
+	Denne filen er ikke tom og vi vil beholde informasjonen i den for å printe imput som en del av resultatet.
+	Vi har derfor brukt APPEND for å  legge til den nye informasjonen etter den eksisterende.

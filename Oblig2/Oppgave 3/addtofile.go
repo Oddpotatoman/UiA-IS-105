@@ -78,4 +78,3 @@ func readResult(path string) {
 	fmt.Println("Resultat: ", resultat)
 }
 
-
