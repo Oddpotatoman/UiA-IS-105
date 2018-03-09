@@ -10,7 +10,7 @@ import (
 
 func readLines(path string) ([]string, error) {
 	file, err := os.Open(path)
-	//"The system cannot find the file specified" dette er en feilmelding som kommer dersom filen den skal lese ikke finnes.
+	//dDette er en feilmelding som kommer dersom filen den skal lese ikke finnes.
 	if err != nil {
 		return nil, err
 	}

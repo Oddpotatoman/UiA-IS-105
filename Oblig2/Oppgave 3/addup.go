@@ -23,9 +23,9 @@ func readInput(c chan int) {
 
 	var tallet1 int
 	var tallet2 int
-	fmt.Println("Her kan du sette inn et tall: ")
+	fmt.Println("Her kan du sette inn ett tall: ")
 	fmt.Scan(&tallet1)
-	fmt.Println("Her kan du sette inn et annet tall: ")
+	fmt.Println("Her kan du sette inn ett annet tall: ")
 	fmt.Scan(&tallet2)
 
 	c <- tallet1 //sender data via channel

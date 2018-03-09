@@ -28,13 +28,13 @@ func main() {
 }
 func addtofile() {
 	// scanner input og lager fil, deretter sriver den ut filen
-	var n1 int
-	var n2 int
+	var tallet1 int
+	var tallet2 int
 
-	fmt.Println("Skriv inn nummer: ")
-	fmt.Scan(&n1)
-	fmt.Println("Skriv inn nummer: ")
-	fmt.Scan(&n2)
+	fmt.Println("Skriv inn tall: ")
+	fmt.Scan(&tallet1)
+	fmt.Println("Skriv inn tall: ")
+	fmt.Scan(&tallet2)
 
 	file, err := os.Create("3b.txt")
 	if err != nil {
@@ -46,7 +46,7 @@ func addtofile() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if _, err := fmt.Fprintf(f, "%d\n%d", n1, n2); err != nil {
+	if _, err := fmt.Fprintf(f, "%d\n%d", tallet1, tallet2); err != nil {
 		log.Fatal(err)
 	}
 
