@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os/signal"
 
-	"UiA-IS-105/Oblig2/src/Oppgave 3/addfile"
+	"./addfile"
 )
 
 func main() {
