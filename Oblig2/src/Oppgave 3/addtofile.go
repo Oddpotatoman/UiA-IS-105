@@ -1,48 +1,81 @@
 package main
 
 import (
-	"os"
 	"io/ioutil"
 	"fmt"
+	"log"
+	"strings"
+	"strconv"
 	"os/signal"
-
-	"UiA-IS-105/Oblig2/src/Oppgave 3/addfile"
+	"os"
 )
 
 func main() {
-	d := make(chan os.Signal, 2)
-	signal.Notify(d, os.Interrupt,)
+	//Implementer håndtering av SIGINT, her skriver programmet et avslutningsmelding når SIGINT blir motatt
+	d := make(chan os.Signal, 1)
+	signal.Notify(d, os.Interrupt)
+
 	go func() {
 		<-d
-		fmt.Println("End of Process")
+		fmt.Println("Nødstopp!!")
 		os.Exit(1)
 	}()
 
-	input1 := os.Args[1]
-	input2 := os.Args[2]
-	input := input1 + " " + input2
 
-	numbers(input)
+	addtofile()
+	sumfromfile()
+	readResult("result.txt")
 }
+func addtofile() {
+	// scanner input og lager fil, deretter sriver den ut filen
+	var n1 int
+	var n2 int
 
-func numbers(input string) {
-	done := make(chan bool, 1)
+	fmt.Println("Enter number: ")
+	fmt.Scan(&n1)
+	fmt.Println("Enter number: ")
+	fmt.Scan(&n2)
 
-	inputB := []byte(input)
-
-	ioutil.WriteFile("tempfile.txt.lock", inputB, 0777)
-
-	go addfile.Adder(done)
-
-	<-done
-
-	b, err := ioutil.ReadFile("tempfile.txt.lock")
-	//"The system cannot find the file specified" dette er en feilmelding som vises dersom filen den går gjennom ikke finnes
+	file, err := os.Create("3b.txt")
 	if err != nil {
-		fmt.Print(err)
+		log.Fatal("Cannot create file", err)
+	}
+	defer file.Close()
+
+	f, err := os.OpenFile("result.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if _, err := fmt.Fprintf(f, "%d\n%d", n1, n2); err != nil {
+		log.Fatal(err)
 	}
 
-	resultat := string(b)
+	if err := f.Close(); err != nil {
+		log.Fatal(err)
+	}
 
-	fmt.Println(resultat)
 }
+
+func checkErr(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
+
+func readResult(path string) {
+	// leser filen, lagrer siste tall i resultat og konverterer til integer (int)
+
+	data, err := ioutil.ReadFile(path)
+	checkErr(err)
+
+	tempData := string(data)
+	stringData := strings.Split(tempData, "\n")
+	temp := stringData[len(stringData)-2]
+
+	resultat, err := strconv.Atoi(temp)
+	checkErr(err)
+
+	fmt.Println("Resultat: ", resultat)
+}
+
+
