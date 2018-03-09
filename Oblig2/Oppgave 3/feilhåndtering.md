@@ -33,7 +33,10 @@ Til slutt lukkes filen og deretter blir skrevet i sumfromfile.go.
 	if e != nil {
 		panic(e)
 
-Koden over har også en feilhåndteringsfunksjon som har i oppgave å lese sluttresusltatet fra "3b.txt"
+Koden over har også en feilhåndteringsfunksjon som har i oppgave å lese sluttresusltatet fra "3b.txt". Dersom den finner
+feil vil den utføre kommandoen panic(e). Panic er en innebygd funksjon i go språket som gjør at den ordinære flyten i
+koden stopper opp. Deretter vil den få panikk. Dette vil si at når en funksjon kaller på panic vil den stoppe
+utførelsen av denne funksjonen. Den vil fortsette å utføre defer funksjoner i koden.
 
 
     file, err := os.OpenFile("result.txt", os.O_APPEND|os.O_WRONLY, 0644)
