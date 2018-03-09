@@ -1,10 +1,6 @@
 Obligatorisk innlevering 2:
-Madina Abdul Sattar,
-Anders Hodne,
 
-Anders Ekse,
-
-Odd Andre Vatne.
+Madina Abdul Sattar,Anders Hodne,Anders Ekse og Odd Andre Vatne.
 
 
 Oppgave 1:
