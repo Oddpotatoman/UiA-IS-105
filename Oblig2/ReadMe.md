@@ -1,3 +1,11 @@
+Obligatorisk innlevering 2:
+Madina Abdul Sattar
+Anders Hodne
+Anders Ekse
+Odd Andre Vatne
+
+
+
 Oppgave 1:
 
 I oppgave 1 har vi laget et program som skal returnere definert informasjon om en fil "fileinfo.go". I tillegg har vi
@@ -35,5 +43,5 @@ dersom de mottar SIGINT før de fullføres naturlig.
 
 e.
 
-I oppgave e har vi bygget om filene i både 1 og 2 og gjort dem til kjørbare  filer på operativsystemet (.exe)
+I oppgave e har vi bygget om filene i både 1, 2 og 3 og gjort dem til kjørbare  filer på operativsystemet (.exe)
 og lagt dem til i en egen bin-mappe.
