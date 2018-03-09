@@ -6,18 +6,26 @@ import (
 	"fmt"
 	"log"
 	"os/signal"
+	
 )
 
 func main() {
-	d := make(chan os.Signal, 2)
-	signal.Notify(d, os.Interrupt,)
+	d := make(chan os.Signal, 1)
+	signal.Notify(d, os.Interrupt)
+	
+	
 	go func() {
-		<-d
-		fmt.Println("End of process")
-		os.Exit(1)
+	
+		for signal := range d {
+			fmt.Println(signal, "SIGINT")
+			os.Exit(1)
+		}
 	}()
-
+	
 	functionA()
+	
+	
+	
 }
 
 func functionA() {
