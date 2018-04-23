@@ -1,6 +1,5 @@
-
-
 package main
+
 
 
 
@@ -16,3 +15,4 @@ func main () {
 func client (w http.ResponseWriter, r * http.Request) {
 	fmt.Fprint(w, "Hello client")
 }
+
