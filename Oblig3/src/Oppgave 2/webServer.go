@@ -1,4 +1,4 @@
-package main
+package Oppgave_2
 
 //People in Space JSON http://api.open-notify.org/astros.json
 
