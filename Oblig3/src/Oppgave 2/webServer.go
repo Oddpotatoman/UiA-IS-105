@@ -1,6 +1,4 @@
-package Oppgave_2
-
-//People in Space JSON http://api.open-notify.org/astros.json
+package main
 
 
 import (
@@ -18,6 +16,9 @@ func main () {
 	http.HandleFunc("/", client)
 	http.HandleFunc("/1", api1)
 	http.HandleFunc("/2", api2)
+	http.HandleFunc("/3", api3)
+	http.HandleFunc("/4", api4)
+	http.HandleFunc("/5", api5)
 	http.ListenAndServe(":8080", nil)
 }
 func client (w http.ResponseWriter, r * http.Request) {
@@ -66,8 +67,9 @@ func api1 (w http.ResponseWriter, r * http.Request){
 	if jsonErr != nil {
 		log.Fatal(jsonErr)
 	}
+	//Very varied when this works or not
+	fp := path.Join("templates","api1.html")
 
-	fp := path.Join("Oblig3/Oppgave 1/templates/api1.html")
 	tmpl, err := template.ParseFiles(fp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -115,13 +117,156 @@ func api2(w http.ResponseWriter, r * http.Request){
 	if jsonErr != nil {
 		log.Fatal(jsonErr)
 	}
-	fp := path.Join("Oblig3/Oppgave 1/templates/api2.html")
+	fp := path.Join("templates","api2.html")
 	tmpl, err := template.ParseFiles(fp)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	if err := tmpl.Execute(w, people1); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+
+}
+//Severe weather warning systems
+func api3(w http.ResponseWriter, r * http.Request){
+
+	type Sites struct{
+		County string `json:"county"`
+		Notifications string `json:"notifications"`
+		User_fees string `json:"user_fees"`
+		Web_site string `json:"web_site"`
+	}
+
+	url := "https://data.mo.gov/resource/b69t-kpq2.json"
+
+	spaceClient := http.Client{
+		Timeout: time.Second * 2, // Maximum of 2 secs
+	}
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	res, getErr := spaceClient.Do(req)
+	if getErr != nil {
+		log.Fatal(getErr)
+	}
+
+	body, readErr := ioutil.ReadAll(res.Body)
+	if readErr != nil {
+		log.Fatal(readErr)
+	}
+
+	var warningSites []Sites
+	jsonErr := json.Unmarshal(body, &warningSites)
+	if jsonErr != nil {
+		log.Fatal(jsonErr)
+	}
+	fp := path.Join("templates","api3.html")
+	tmpl, err := template.ParseFiles(fp)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if err := tmpl.Execute(w, warningSites); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+
+}
+func api4(w http.ResponseWriter, r * http.Request){
+
+	type Hospitals struct{
+		Average_covered_charges string `json:"average_covered_charges"`
+		Average_medicare_payments string `json:"average_medicare_payments"`
+		Provider_city string `json:"provider_city"`
+		Provider_name string `json:"provider_name"`
+		Provider_street_address string `json:"provider_street_address"`
+		Provider_zip_code string `json:"provider_zip_code"`
+		Total_discharges string `json:"total_discharges"`
+	}
+
+	url := "https://data.cms.gov/resource/ehrv-m9r6.json"
+
+	spaceClient := http.Client{
+		Timeout: time.Second * 2, // Maximum of 2 secs
+	}
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	res, getErr := spaceClient.Do(req)
+	if getErr != nil {
+		log.Fatal(getErr)
+	}
+
+	body, readErr := ioutil.ReadAll(res.Body)
+	if readErr != nil {
+		log.Fatal(readErr)
+	}
+
+	var hospitalAverages []Hospitals
+	jsonErr := json.Unmarshal(body, &hospitalAverages)
+	if jsonErr != nil {
+		log.Fatal(jsonErr)
+	}
+	fp := path.Join("templates","api4.html")
+	tmpl, err := template.ParseFiles(fp)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if err := tmpl.Execute(w, hospitalAverages); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+
+}
+func api5(w http.ResponseWriter, r * http.Request){
+
+	type Tick struct {
+		Name string `json:"name"`
+		Symbol string `json:"symbol"`
+		Rank string `json:"rank"`
+		Price_usd string `json:"price_usd"`
+		Price_btc string `json:"price_btc"`
+	}
+
+	url := "https://api.coinmarketcap.com/v1/ticker/?start=0&limit=100"
+
+	spaceClient := http.Client{
+		Timeout: time.Second * 2, // Maximum of 2 secs
+	}
+
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	res, getErr := spaceClient.Do(req)
+	if getErr != nil {
+		log.Fatal(getErr)
+	}
+
+	body, readErr := ioutil.ReadAll(res.Body)
+	if readErr != nil {
+		log.Fatal(readErr)
+	}
+
+	var cryptoCurrency []Tick
+	jsonErr := json.Unmarshal(body, &cryptoCurrency)
+	if jsonErr != nil {
+		log.Fatal(jsonErr)
+	}
+	fp := path.Join("templates","api5.html")
+	tmpl, err := template.ParseFiles(fp)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	if err := tmpl.Execute(w, cryptoCurrency); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 

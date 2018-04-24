@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Api</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <div class="col-10">
+        <table class="table">
+            <tr>
+                <th>Average_covered_charges</th>
+                <th>Average_medicare_payments</th>
+                <th>City</th>
+                <th>Hospital Name</th>
+                <th>Adress</th>
+                <th>Zip code</th>
+                <th>Total discharges</th>
+            </tr>
+        {{ range . }}
+            <tr>
+                <td>{{.Average_covered_charges}}</td>
+                <td>{{.Average_medicare_payments}}</td>
+                <td>{{.Provider_city}}</td>
+                <td>{{.Provider_name}}</td>
+                <td>{{.Provider_street_address}}</td>
+                <td>{{.Provider_zip_code}}</td>
+                <td>{{.Total_discharges}}</td>
+            </tr>
+        {{end}}
+</table>
+    </div>
+</div>
+</body>
+</html>
