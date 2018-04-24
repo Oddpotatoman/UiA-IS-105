@@ -8,10 +8,10 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/", juni)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
+func juni(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, client")
 }
