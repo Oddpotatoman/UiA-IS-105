@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9308b1df-363f-4913-92a2-5688d9a212a0" name="Default" comment="endre">
-      <change afterPath="$PROJECT_DIR$/Oblig3/src/README.MD" afterDir="false" />
+    <list default="true" id="9308b1df-363f-4913-92a2-5688d9a212a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig3/src/Oppgave 1/webServer.go" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig3/src/Oppgave 1/webServer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="webServer.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 2/webServer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1648">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="56">
+              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -41,11 +40,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="webServer.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="webServer.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 1/webServer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="119">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
                 <element signature="e#14#51#0" expanded="true" />
               </folding>
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="-37">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
               <folding>
                 <element signature="e#14#53#0" expanded="true" />
               </folding>
@@ -95,9 +94,9 @@
         <option value="$PROJECT_DIR$/Oblig3/scr/Oppgave 1/webServer.go" />
         <option value="$PROJECT_DIR$/Oblig3/Oppgave 1/webServer.go" />
         <option value="$PROJECT_DIR$/Oblig3/src/Oppgave 2/webServer.go" />
-        <option value="$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go" />
         <option value="$PROJECT_DIR$/Oblig3/src/Oppgave 3/client.go" />
         <option value="$PROJECT_DIR$/Oblig3/src/Oppgave 1/webServer.go" />
+        <option value="$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go" />
       </list>
     </option>
   </component>
@@ -111,10 +110,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="109" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="728" />
+    <option name="y" value="126" />
+    <option name="width" value="630" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -163,6 +162,14 @@
               <item name="Oblig3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Oppgave 2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UiA-IS-105" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UiA-IS-105" type="462c0819:PsiDirectoryNode" />
+              <item name="Oblig3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Oppgave 2" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UiA-IS-105" type="b2602c69:ProjectViewProjectNode" />
@@ -221,13 +228,13 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="109" width="1382" height="744" extended-state="0" />
+    <frame x="728" y="126" width="630" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12591508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49926794" visible="true" weight="0.32913387" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.32913387" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49837133" visible="true" weight="0.33386582" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50162864" side_tool="true" visible="true" weight="0.33386582" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49853587" weight="0.32913387" />
@@ -485,23 +492,6 @@
     <entry file="file://$PROJECT_DIR$/Oblig3/scr/Oppgave 1/main.go" />
     <entry file="file://$PROJECT_DIR$/Oblig3/scr/Oppgave 1/webServer.go" />
     <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 2/webServer.go" />
-    <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 2/webServer.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1648">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 3/client.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
@@ -517,10 +507,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 1/webServer.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="e#14#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 2/webServer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Oblig3/src/Oppgave 3/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="e#14#53#0" expanded="true" />
           </folding>
         </state>
       </provider>

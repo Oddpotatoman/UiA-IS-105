@@ -15,7 +15,7 @@ func sendResponse(conn *net.UDPConn, addr *net.UDPAddr) {
 }
 
 func main() {
-	fmt.Println("Server running...")
+
 	go tcpServer ()
 	go udpServer ()
 	time.Sleep(time.Second * 100000)
@@ -32,6 +32,8 @@ func udpServer() {
 		fmt.Printf("Some error %v\n", err)
 		return
 	}
+
+
 	for {
 		_, remoteaddr, err := ser.ReadFromUDP(p)
 		fmt.Printf("UDP Connection established, received message from %v %s \n", remoteaddr, p)
