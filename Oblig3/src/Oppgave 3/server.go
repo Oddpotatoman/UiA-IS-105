@@ -16,12 +16,12 @@ func sendResponse(conn *net.UDPConn, addr *net.UDPAddr) {
 
 func main() {
 	fmt.Println("Server running...")
-	go tcpConnection ()
-	go udpConnection ()
+	go tcpServer ()
+	go udpServer ()
 	time.Sleep(time.Second * 100000)
 }
 
-func udpConnection() {
+func udpServer() {
 	p := make([]byte, 2048)
 	addr := net.UDPAddr{
 		Port: 17,
@@ -43,7 +43,7 @@ func udpConnection() {
 	}
 }
 
-func tcpConnection(){
+func tcpServer(){
 	l, err := net.Listen("tcp", "127.0.0.1:17")
 	if err != nil {
 		log.Fatal(err)
