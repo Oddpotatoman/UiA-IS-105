@@ -12,3 +12,4 @@ Nodene består av Klient, webserver og databaseserveren. I denne systemarkitektu
 
 
 
+Klienten som er vår webserver oppretter en tilkobling med server hos yr.no. Dersetter blir det sendt en forespørsel fra webserveren og vi får svar fra yr.no. Forespørselen om API  blir prossesert hos yr.no, og vi får svar tilbake i form av våre fårspurte data (XML fil). 
