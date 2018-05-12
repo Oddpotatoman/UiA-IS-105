@@ -85,6 +85,9 @@ func weatherSuggestion(w http.ResponseWriter, r *http.Request, extension string)
 		XMLweather = getWdFromUrl
 	}
 
+	runes := []rune(XMLweather)
+	safeSubstring := string(runes[0:40])
+	log.Println(safeSubstring)
 	fp := path.Join("Oblig4/templates/suggestion.html")
 	tmpl, err := template.ParseFiles(fp)
 	if err != nil {
@@ -100,12 +103,11 @@ func weatherSuggestion(w http.ResponseWriter, r *http.Request, extension string)
 	var totalTemp = convertStringToInt(weatherData.Forecast.Tabular[0].Temperature.Value)
 	var totalWs = convertStringToFloat(weatherData.Forecast.Tabular[0].WindSpeed.Mps)
 
-	println(weatherType)
-	println(totalWs)
-	println(totalTemp)
 	if err := tmpl.Execute(w, getMessage(totalTemp, totalWs, weatherType)); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
+	test := "lol"
+	log.Println(test)
 
 }
 func getMessage(temp int, ws float64, wt string) (string) {
